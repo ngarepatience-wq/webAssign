@@ -4,13 +4,13 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f8fb;
-    color: #333;
+    color: #333333;
 }
 
 /* Header */
 header {
-    background-color: #0077b6;
-    color: white;
+    background-color: #f9daf9;
+    color: rgb(210, 42, 182);
     text-align: center;
     padding: 30px;
 }
@@ -24,25 +24,28 @@ header p {
 }
 
 /* Navigation */
-nav {
-    margin-top: 20px;
+.toplink {
+    background-color: #710073;
+    text-align: center;
+    padding: 12px;
 }
 
-nav a {
+.toplink a {
     color: white;
     text-decoration: none;
-    margin: 0 15px;
+    margin: 0 10px;
     font-weight: bold;
 }
 
-nav a:hover {
-    text-decoration: underline;
+.toplink a:hover {
+    color: #ffdd57;
 }
 
 /* Main Content */
 main {
     width: 80%;
-    margin: 30px auto;
+    margin:  30px auto;
+    padding: 20px;
 }
 
 /* Sections */
@@ -50,14 +53,15 @@ section {
     background-color: white;
     padding: 20px;
     margin-bottom: 20px;
-    border-radius: 10px;
+
 }
 
 /* Featured Destinations */
 article {
-    border-left: 5px solid #0077b6;
+    border-left: 5px solid #9500b6;
     padding-left: 15px;
     margin-bottom: 15px;
+    border-radius: 5px;
 }
 
 /* Travel Tips */

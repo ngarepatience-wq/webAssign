@@ -113,3 +113,29 @@ button[type="submit"] {
     border-radius: 5px;
     cursor: pointer;
 }
+
+article {
+    background: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 700px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+article img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+    margin: 15px auto;
+    border-radius: 10px;
+}
+
+article h3 {
+    text-align: center;
+}
+
+article p {
+    text-align: center;
+}

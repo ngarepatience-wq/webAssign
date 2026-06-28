@@ -29,9 +29,22 @@
                onkeyup="searchFunction()"
                style="width:100%; padding:10px; margin-bottom:20px;">
 
+        <select id="filterSelect">
+            <option value="all">All Types</option>
+            <option value="city">City</option>
+            <option value="luxury">Luxury</option>
+            
+        </select>
+
+        <select id="sortSelect">
+            <option value="default">Sort by Price</option>
+            <option value="low">Low → High</option>
+            <option value="high">High → Low</option>
+        </select>
+
         <h2>Explore Amazing Places</h2>
 
-        <article class="destination">
+        <article class="destination" data-type="city" data-price="1000">
             <h3>Paris, France</h3>
             <img src="images/Rainy Paris cafe.jpg"
              alt="Rainy Paris cafe" width="300">
@@ -46,7 +59,7 @@
             <button onclick="window.location.href='booking.html'">Book Now</button>
         </article>
 
-        <article class="destination">
+        <article class="destination" data-type="luxury" data-price="2500">
             <h3>Dubai, UAE</h3>
             <img src="images/dubai.jpg" alt="Dubai Skyline" width="300">
             <img src="images/Museum of the Future, Dubai.jpg"
@@ -60,7 +73,7 @@
             <button onclick="window.location.href='booking.html'">Book Now</button>
         </article>
 
-        <article class="destination">
+        <article class="destination" data-type="city" data-price="1500">
             <h3>London, United Kingdom</h3>
             <img src="images/ava nash • god of war • legacy of gods.jpg"
              alt="London" width="300">
@@ -76,7 +89,7 @@
             <button onclick="window.location.href='booking.html'">Book Now</button>
         </article>
 
-        <article class="destination">
+        <article class="destination" data-type="city" data-price="2000">
             <h3>Tokyo, Japan</h3>
              <img src="images/tokyo.jpg" alt="Tokyo" width="300">
              <img src="images/The Ultimate List of 10 Must-Do Activities in Tokyo.jpg"
@@ -94,28 +107,5 @@
 
     
     </main>
-    <script>
-        function searchFunction() {
-            let input = document.getElementById("searchInput").value.toLowerCase();
-            let destinations = document.getElementsByClassName("destination");
-
-            for (let i = 0; i < destinations.length; i++) {
-                let title = destinations[i].getElementsByTagName("h3")[0];
-                let text = title.textContent.toLowerCase();
-
-                if (text.includes(input)) {
-                    destinations[i].style.display = "";
-                } else {
-                    destinations[i].style.display = "none";
-                }
-            }
-        }
-
-        function selectDestination(name) {
-            alert("You selected " + name + "!");
-            window.location.href = "booking.html?destination=" + name;
-        }
-    </script>
-
 </body>
 </html>

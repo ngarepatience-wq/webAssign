@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Trip - Travel Explorer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <div class="toplink">
+        <a href="index.html">Home</a> &#65372;
+        <a href="about.html">About</a> &#65372;
+        <a href="destinations.html">Destinations</a> &#65372;
+        <a href="gallery.html">Gallery</a> &#65372;
+        <a href="contact.html">Contact</a> &#65372;
+        <a href="booking.html">Booking</a>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <h1>Book Your Dream Trip</h1>
+        <p>Fill in the form below to reserve your next adventure</p>
+    </header>
+
+    <!-- Booking Form -->
+    <main>
+        <h2>Booking Form</h2>
+
+        <form action="booking-success.html" method="get">
+
+            <label for="name">Full Name:</label><br>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+
+            <label for="destination">Destination:</label><br>
+            <select id="destination" name="destination" required>
+                <option value="">-- Select Destination --</option>
+                <option value="paris">Paris</option>
+                <option value="dubai">Dubai</option>
+                <option value="london">London</option>
+                <option value="tokyo">Tokyo</option>
+            </select><br><br>
+
+            <label for="date">Travel Date:</label><br>
+            <input type="date" id="date" name="date" required><br><br>
+
+            <label for="people">Number of People:</label><br>
+            <input type="number" id="people" name="people" min="1" max="20" required><br><br>
+
+            <label for="message">Additional Requests:</label><br>
+            <textarea id="message" name="message" rows="5" placeholder="Any special requests?"></textarea><br><br>
+
+            <button type="submit">Book Now</button>
+
+        </form>
+    </main>
+
+</body>
+</html>

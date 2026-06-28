@@ -115,6 +115,47 @@ main {
 .hero-btn:hover {
     background: #ff6f00;
 }
+.testimonials {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.testimonials h2 {
+    color: #3e3404;
+    margin-bottom: 30px;
+}
+
+.testimonial-container {
+    display: block;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.testimonial {
+    text-align: left;
+    color: #3e3404;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 20px;
+    margin-bottom: 20px;
+
+}
+
+.testimonial p {
+    text-align: justify;
+}
+
+.testimonial h4 {
+    color: gold;
+    margin-top: 15px;
+}
+
+.testimonial span {
+    display: block;
+    margin-top: 5px;
+    font-weight: bold;
+    color: #3e3404;
+}
 
 section {
     background-color: url("images/Travel\ Essentials.jpg");

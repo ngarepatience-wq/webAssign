@@ -77,7 +77,44 @@ main {
     margin: 30px auto;
     padding: 20px;
 }
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: rgba(255, 255, 255, 0.75);
+    border-radius: 15px;
+    margin-bottom: 40px;
+}
 
+.hero h2 {
+    font-size: 45px;
+    color: #3e3404;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    max-width: 700px;
+    margin: auto;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    color: #3e3404;
+    text-shadow: none;
+}
+
+.hero-btn {
+    display: inline-block;
+    background: #8e6507;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.hero-btn:hover {
+    background: #ff6f00;
+}
 
 section {
     background-color: url("images/Travel\ Essentials.jpg");

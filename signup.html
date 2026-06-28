@@ -6,41 +6,52 @@
     <title>Sign Up</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-     <div class="toplink">
-        <a href="./">Home</a> &#65372;
+
+    <!-- Navigation -->
+    <div class="toplink">
+        <a href="index.html">Home</a> &#65372;
         <a href="about.html">About</a> &#65372;
         <a href="projects.html">Project</a> &#65372;
-        <a href="hobbies.html">Hobbies</a>
-        <a href="contact.html">Contact</a>
+        <a href="hobbies.html">Hobbies</a> &#65372;
+        <a href="contact.html">Contact</a> &#65372;
         <a href="signup.html">Sign Up</a>
+    </div>
 
-    </div>class="toplink-banner">
-        <h1>Welcome to travel Sign Up Page</h1>
+    <!-- Banner -->
+    <header class="toplink-banner">
+        <h1>Welcome to Travel Sign Up Page</h1>
         <p>Join us today and be part of our amazing community!</p>
-    </div>
-    </div class="row">
+    </header>
+
+    <!-- Content -->
+    <main class="row">
         <div class="content">
-    <h1>Sign Up</h1>
-    <form action=" " method="post" id="signup-form" name="signup-form" class="authForm">
 
+            <h1>Sign Up</h1>
 
-    <form action=" "method="post" id="signup-form" name="signup-form" class="authForm">
+            <!-- FIXED FORM (redirect added here) -->
+            <form action="success.html" method="get" id="signup-form" class="authForm">
 
-    <label for="name">Name:</label><br>
-    <input type="text" name=" " placeholder="Enter your name" required><br>
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
 
-    <label for="email">Email:</label><br>
-    <input type="email" name=" " placeholder="Enter your email" required><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
 
-    <label for="phone">Phone Number:</label><br>
-    <input type="tel" name=" " placeholder="Enter your phone number" required><br>
+                <label for="phone">Phone Number:</label><br>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required><br><br>
 
-    <label for="password">Password:</label><br>
-    <input type="password" name=" " placeholder="Enter your password" required><br>
-    <input type="submit" value="Sign Up">
-</form>
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required><br><br>
 
-    </div>
+                <input type="submit" value="Sign Up">
 
-</div>
+            </form>
+
+        </div>
+    </main>
+
+</body>
+</html>

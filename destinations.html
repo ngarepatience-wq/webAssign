@@ -21,9 +21,17 @@
     </div>
 
     <main>
+          <h2>Search Your Destination</h2>
+
+        <!-- 🔍 SEARCH BOX -->
+        <input type="text" id="searchInput"
+               placeholder="Search Paris, Dubai, London, Tokyo..."
+               onkeyup="searchFunction()"
+               style="width:100%; padding:10px; margin-bottom:20px;">
+
         <h2>Explore Amazing Places</h2>
 
-        <article>
+        <article class="destination">
             <h3>Paris, France</h3>
             <img src="images/Rainy Paris cafe.jpg"
              alt="Rainy Paris cafe" width="300">
@@ -35,9 +43,10 @@
                 Known as the City of Light, Paris is famous for the Eiffel Tower,
                 world-class museums, and romantic atmosphere.
             </p>
+            <button onclick="window.location.href='booking.html'">Book Now</button>
         </article>
 
-        <article>
+        <article class="destination">
             <h3>Dubai, UAE</h3>
             <img src="images/dubai.jpg" alt="Dubai Skyline" width="300">
             <img src="images/Museum of the Future, Dubai.jpg"
@@ -48,11 +57,11 @@
                 Discover luxury shopping, modern skyscrapers, desert adventures,
                 and incredible entertainment.
             </p>
+            <button onclick="window.location.href='booking.html'">Book Now</button>
         </article>
 
-        <article>
+        <article class="destination">
             <h3>London, United Kingdom</h3>
-            <img src="images/london.jpg" alt="London" width="300">
             <img src="images/ava nash • god of war • legacy of gods.jpg"
              alt="London" width="300">
             <img src="images/7881368095668976.jpg"
@@ -64,9 +73,10 @@
                 
        
             </p>
+            <button onclick="window.location.href='booking.html'">Book Now</button>
         </article>
 
-        <article>
+        <article class="destination">
             <h3>Tokyo, Japan</h3>
              <img src="images/tokyo.jpg" alt="Tokyo" width="300">
              <img src="images/The Ultimate List of 10 Must-Do Activities in Tokyo.jpg"
@@ -78,11 +88,34 @@
                 Experience a unique blend of traditional culture and cutting-edge technology,
                 delicious cuisine, and vibrant city life.
             </p>
+            <button onclick="window.location.href='booking.html'">Book Now</button>
         </article>
        
 
     
     </main>
+    <script>
+        function searchFunction() {
+            let input = document.getElementById("searchInput").value.toLowerCase();
+            let destinations = document.getElementsByClassName("destination");
+
+            for (let i = 0; i < destinations.length; i++) {
+                let title = destinations[i].getElementsByTagName("h3")[0];
+                let text = title.textContent.toLowerCase();
+
+                if (text.includes(input)) {
+                    destinations[i].style.display = "";
+                } else {
+                    destinations[i].style.display = "none";
+                }
+            }
+        }
+
+        function selectDestination(name) {
+            alert("You selected " + name + "!");
+            window.location.href = "booking.html?destination=" + name;
+        }
+    </script>
 
 </body>
 </html>

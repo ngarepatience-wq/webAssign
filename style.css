@@ -1,41 +1,51 @@
 /* General Styles */
+
+:root {
+    --primary: #e51ed8;
+    --secondary: #d81ebca9;
+    --accent: #ff6f00;
+    --text: #1f1f1f;
+    --white: #ffffff;
+    --card-bg: rgba(255, 255, 255, 0.92);
+}
+
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f8fb;
-    color: #333333;
 
-     /* Background Image Added */
     background-image: url("images/33284484742462992.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
 
-    color: #333333;
+    color: var(--text);
 }
+p {
+    font-weight: 600;
+    font-size: 17px;
+    color: #161615;
 
-
-/* Header */
+}
 header {
-    background-color: #f9daf9;
-    color: rgb(210, 42, 182);
+    background: rgba(255, 255, 255, 0.85);
     text-align: center;
     padding: 30px;
+    backdrop-filter: blur(6px);
 }
 
 header h1 {
     margin: 0;
+    font-size: 40px;
+    font-weight: 800;
+    color: var(--secondary);
 }
 
-header p {
-    margin-top: 10px;
-}
 
-/* Navigation */
 .toplink {
-    background-color: #710073;
+    background-color: var(--secondary);
     text-align: center;
     padding: 12px;
 }
@@ -45,92 +55,36 @@ header p {
     text-decoration: none;
     margin: 0 10px;
     font-weight: bold;
+    transition: 0.3s;
 }
 
 .toplink a:hover {
-    color: #ffdd57;
+    color: var(--accent);
 }
 
-/* Main Content */
+
 main {
-    width: 80%;
-    margin:  30px auto;
+    width: 85%;
+    margin: 30px auto;
     padding: 20px;
 }
 
-/* Sections */
+
 section {
-    background-color: white;
+    background-color: var(--white);
     padding: 20px;
     margin-bottom: 20px;
-
-}
-
-/* Featured Destinations */
-article {
-    border-left: 5px solid #9500b6;
-    padding-left: 15px;
-    margin-bottom: 15px;
-    border-radius: 5px;
-}
-
-/* Travel Tips */
-ul {
-    line-height: 1.8;
-}
-
-/* Footer */
-footer {
-    background-color: #023e8a;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    margin-top: 20px;
-}
-
-/* Horizontal Line */
-hr {
-    border: none;
-    height: 1px;
-    background-color: #ddd;
-}
-/* Contact Form */
-form {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 5px;
-    width: 100%;
-}
-/* Gallery */
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-}
-input[type="text"], input[type="email"], textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-button[type="submit"] {
-    background-color: #710073;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    border-radius: 10px;
 }
 
 article {
-    background: #fff;
+    background: var(--card-bg);
     padding: 20px;
     margin: 20px auto;
-    max-width: 700px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    max-width: 750px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    border-left: 6px solid var(--primary);
 }
 
 article img {
@@ -144,141 +98,84 @@ article img {
 
 article h3 {
     text-align: center;
+    font-size: 22px;
+    color: var(--secondary);
 }
 
 article p {
     text-align: center;
+    font-size: 16px;
+    line-height: 1.6;
 }
 
-/* Header */
-header {
-    background-color: #f9daf9;
-    color: rgb(210, 42, 182);
-    text-align: center;
-    padding: 30px;
-}
 
-header h1 {
-    margin: 0;
-}
-
-header p {
-    margin-top: 10px;
-}
-
-/* Navigation */
-.toplink {
-    background-color: #710073;
-    text-align: center;
-    padding: 12px;
-}
-
-.toplink a {
+button {
+    display: block;
+    margin: 10px auto;
+    background-color: var(--primary);
     color: white;
-    text-decoration: none;
-    margin: 0 10px;
-    font-weight: bold;
-}
-
-.toplink a:hover {
-    color: #ffdd57;
-}
-
-/* Main Content */
-main {
-    width: 80%;
-    margin:  30px auto;
-    padding: 20px;
-}
-
-/* Sections */
-section {
-    background-color: white;
-    padding: 20px;
-    margin-bottom: 20px;
-
-}
-
-/* Featured Destinations */
-article {
-    border-left: 5px solid #9500b6;
-    padding-left: 15px;
-    margin-bottom: 15px;
-    border-radius: 5px;
-}
-
-/* Travel Tips */
-ul {
-    line-height: 1.8;
-}
-
-/* Footer */
-footer {
-    background-color: #023e8a;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    margin-top: 20px;
-}
-
-/* Horizontal Line */
-hr {
+    padding: 10px 15px;
     border: none;
-    height: 1px;
-    background-color: #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
 }
-/* Contact Form */
+
+button:hover {
+    background-color: var(--accent);
+}
+
+
 form {
-    background-color: #f9f9f9;
+    background-color: var(--white);
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 8px;
     width: 100%;
 }
-/* Gallery */
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-}
-input[type="text"], input[type="email"], textarea {
+
+input[type="text"],
+input[type="email"],
+textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
-button[type="submit"] {
-    background-color: #710073;
+/* =========================
+   CONTROLS
+   ========================= */
+.controls {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+select, input {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* =========================
+   GALLERY
+   ========================= */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+footer {
+    background-color: var(--secondary);
     color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-article {
-    background: #fff;
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 700px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-}
-
-article img {
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-    display: block;
-    margin: 15px auto;
-    border-radius: 10px;
-}
-
-article h3 {
     text-align: center;
-}
-
-article p {
-    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
 }

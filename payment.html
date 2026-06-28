@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - Travel Explorer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <div class="toplink">
+        <a href="index.html">Home</a> &#65372;
+        <a href="about.html">About</a> &#65372;
+        <a href="destinations.html">Destinations</a> &#65372;
+        <a href="gallery.html">Gallery</a> &#65372;
+        <a href="booking.html">Booking</a> &#65372;
+        <a href="payment.html">Payment</a>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <h1>Secure Payment</h1>
+        <p>Complete your booking by making a payment</p>
+    </header>
+
+    <!-- Payment Form -->
+    <main>
+        <h2>Payment Details</h2>
+
+        <form action="payment-success.html" method="get">
+
+            <label for="name">Card Holder Name:</label><br>
+            <input type="text" id="name" name="name" placeholder="Name on card" required><br><br>
+
+            <label for="card">Card Number:</label><br>
+            <input type="text" id="card" name="card" placeholder="1234 5678 9012 3456" maxlength="16" required><br><br>
+
+            <label for="expiry">Expiry Date:</label><br>
+            <input type="month" id="expiry" name="expiry" required><br><br>
+
+            <label for="cvv">CVV:</label><br>
+            <input type="password" id="cvv" name="cvv" maxlength="3" placeholder="123" required><br><br>
+
+            <label for="method">Payment Method:</label><br>
+            <select id="method" name="method" required>
+                <option value="">-- Select Method --</option>
+                <option value="visa">Visa</option>
+                <option value="mastercard">MasterCard</option>
+                <option value="paypal">PayPal</option>
+                <option value="applepay">Apple Pay</option>
+                <option value="googlepay">Google Pay</option>
+                <option value="banktransfer">Bank Transfer</option>
+                <option value="crypto">Cryptocurrency</option>
+                <option value="other">Other</option>
+            </select><br><br>
+
+            <button type="submit">Pay Now</button>
+
+        </form>
+    </main>
+
+</body>
+</html>
